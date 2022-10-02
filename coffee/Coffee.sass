@@ -1,0 +1,983 @@
+$color: #EFE6DE
+$colorOfCoffee: #9E805C
+
+body
+	margin: 0
+	font-family: arial
+
+.bodyActive
+	overflow: hidden
+
+.body1
+	display: none
+	width: 100%
+	height: 100%
+	background-color: #000000b2
+	z-index: 100
+	position: absolute
+	bottom: 0px
+
+.bodyList
+	display: none
+	flex-direction: column
+	text-align: center
+	width: 25%
+	height: 400px
+	z-index: 101
+	background-color: $color
+	color: $colorOfCoffee
+	border-radius: 10px
+	position: absolute
+	left: 35%
+	bottom: 30%
+
+.bodyText
+	display: flex
+	flex-direction: column
+	align-items: center
+	border-top: 2.5px solid $colorOfCoffee
+	font-size: 20px
+	padding: 20px
+
+.bodyText > input
+	width: 100%
+	height: 35px
+	margin: 10px
+	border-radius: 5px
+	border: 2px solid $colorOfCoffee
+	color: $colorOfCoffee
+	outline: none
+
+.bodyText > button
+	width: 200px
+	height: 50px
+	font-size: 20px
+	border-radius: 5px
+	border: 2px solid $colorOfCoffee
+	cursor: pointer
+	color: $colorOfCoffee
+	background-color: white
+
+.bodyList1
+	display: none
+	flex-direction: column
+	text-align: center
+	width: 25%
+	height: 400px
+	z-index: 101
+	background-color: $color
+	color: $colorOfCoffee
+	border-radius: 10px
+	position: absolute
+	left: 35%
+	bottom: 30%
+
+.bodyText1
+	display: flex
+	flex-direction: column
+	align-items: center
+	border-top: 2.5px solid $colorOfCoffee
+	font-size: 20px
+	padding: 20px
+
+.bodyText1 > input
+	width: 100%
+	height: 35px
+	margin: 10px
+	border-radius: 5px
+	border: 2px solid $colorOfCoffee
+	color: $colorOfCoffee
+	outline: none
+
+.bodyText1 > button
+	width: 200px
+	height: 50px
+	font-size: 20px
+	border-radius: 5px
+	border: 2px solid $colorOfCoffee
+	cursor: pointer
+	color: $colorOfCoffee
+	background-color: white
+
+*
+	box-sizing: border-box
+
+h1,h2,h3,h4,h5,h6
+	margin: 0
+	color: #EFE6DE
+
+h1
+	font-size: 45px
+	margin: 10px
+
+p
+	margin: 0
+	color: #EFE6DE
+
+::-webkit-scrollbar
+	width: 15px
+
+::-webkit-scrollbar-track
+	background: linear-gradient(90deg, #434343, #434343 1px, #111 0, #111)
+
+::-webkit-scrollbar-thumb
+	background: #9E805C
+	border-radius: 20px
+	box-shadow: inset 2px 2px 2px #00000070
+
+::-webkit-scrollbar-thumb:hover
+	background: linear-gradient(180deg, #ffe3598c, #ffa851c0 76.05%)
+	border-radius: 20px
+	box-shadow: 2px 2px 2px
+
+::-webkit-input-placeholder
+	color: white
+
+::-webkit-search-cancel-button
+
+.header
+	display: flex
+	width: 100%
+	height: auto
+	padding: 0px 10px 0px 10px
+	background-color: #9E805C
+	z-index: 99
+	box-shadow: rgba(216, 170, 110, 0.171) 2px 2px 2px 2px
+	position: fixed
+	top: -10px
+
+.header::after
+	display: flex
+	content: " "
+	background: linear-gradient(to left, #ffe359, #ffa851)
+	width: 100%
+	height: 5px
+	position: absolute
+	left: 0
+	top: 95px
+
+.coffee__header
+	transition: 1s
+
+.coffee__header:hover
+	transform: rotate(720deg)
+
+.FSJ > input
+	width: 80%
+	height: 95px
+	border: 0
+	outline: 0
+	padding: 10px
+	margin: 0px 0px 0px 10px
+	background-color: rgba(0, 0, 0, 0.19)
+	color: white
+	font-size: 20px
+
+.input__search
+	display: none
+
+.FSJ
+	display: flex
+	width: 100%
+	height: auto
+	align-items: center
+	color: #EFE6DE
+	font-size: 20px
+
+.Find__Store
+	display: flex
+	align-items: center
+	text-align: center
+	margin: 0px 2.5px 0px 2.5px
+
+.Find__Store > p
+	cursor: pointer
+	margin: 0
+	font-size: 15px
+
+.Find__Store > p:hover
+	text-decoration: underline
+
+.Store__none
+	display: none
+
+.header__FSJ
+	display: flex
+	align-items: center
+	list-style: none
+	margin: 0px
+	padding: 0
+
+.header__FSJ > li
+	text-align: center
+	width: 110px
+	margin: 0px 5px 0px 5px
+	padding: 15px
+	border-radius: 10px
+	font-size: 20px
+	cursor: pointer
+	background-color: rgba(0, 0, 0, 0.19)
+	color: $color
+
+.FSJ > svg
+	margin: 0px 5px 0px 5px
+
+.header__FSJ > li::after
+	display: flex
+	align-items: center
+	content: ""
+	width: 0%
+	height: 2.5px
+	transition: .2s
+	background-color: $colorOfCoffee
+
+.header__FSJ > li:hover
+	transition: .2s
+	background-color: $color
+	color: $colorOfCoffee
+
+.header__FSJ > li:hover::after
+	width: 100%
+
+.close__burger
+	display: none
+
+.close
+	display: block
+
+.menu__burger
+	display: none
+	cursor: pointer
+	border: solid #EFE6DE
+	background-color: $colorOfCoffee
+	border-radius: 10px
+	padding: 10px
+	z-index: 10
+
+.drop__menu
+	display: flex
+	display: none
+	align-items: center
+	text-align: center
+	list-style: none
+	width: 100%
+	height: auto
+	margin-top: 70px
+	z-index: 1
+	border-radius: 0px 0px 10px 10px
+	background-color: #9E805C
+	right: 0px
+	top: 80px
+
+.drop__menu > li
+	display: none
+	margin: 5px 1px 5px 1px
+	padding: 20px
+	font-size: 30px
+	cursor: pointer
+	transition: .3s
+	background-color: rgba(0, 0, 0, 0.19)
+	border-radius: 10px
+	color: $color
+
+.drop__menu > li:hover
+	background-color: $color
+	color: $colorOfCoffee
+
+.burger__active
+	display: block
+
+.burger
+	display: none
+
+.drop__active
+	display: block
+
+.ul__menu
+	display: flex
+	list-style: none
+	margin: 0px
+	padding: 0
+
+.ul__menu > li
+	margin: 0px 2.5px 0px 2.5px
+	padding: 20px
+	font-size: 20px
+	cursor: pointer
+	transition: .3s
+	background-color: rgba(0, 0, 0, 0.19)
+	color: $color
+
+.ul__menu > li::after
+	display: flex
+	content: " "
+	width: 0%
+	height: 2px
+	transition: .2s
+	background-color: $colorOfCoffee
+
+.ul__menu > li:hover
+	background-color: $color
+	color: $colorOfCoffee
+
+.ul__menu > li:hover::after
+	width: 100%
+
+.navigation
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	height: auto
+	margin-top: 5px
+	z-index: 9
+	background-color: #9E805C
+	position: fixed
+
+.navigation > li
+	margin: 0px 5px 0px 5px
+
+.content
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	height: auto
+	padding: 75px 5vw 75px 5vw
+	margin-top: 85px
+	background-image: url("blob-scene-haikei (3).svg")
+	background-repeat: no-repeat
+	background-size: cover
+
+.history__site
+	display: flex
+	width: 60%
+	height: 500px
+	border-radius: 5px
+	background-color: $colorOfCoffee
+
+.advertising
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 35%
+	height: 500px
+	border-radius: 5px
+	margin: 25px
+	background-image: url("nescafe.jpg")
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	color: $color
+	font-size: 20px
+	font-weight: 600
+
+.img
+	display: flex
+	width: 100%
+	border-radius: 5px 5px 5px 5px
+	background-image: url("1.jpg")
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+
+.img::after
+	content: " "
+	width: 100%
+	height: 100%
+	border-radius: 5px 5px 5px 5px
+	background: linear-gradient(to left, #ffe3595e, #ffa85144)
+
+.history__text
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: center
+	width: 100%
+	height: auto
+	padding: 10px
+	line-height: 35px
+	color: $color
+
+.text__content
+	line-height: 1.3
+	font-size: 35px
+
+.container
+	text-align: center
+	width: 100%
+	height: auto
+	background-color: $colorOfCoffee
+
+.historyContent
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	text-align: center
+	font-size: 20px
+
+.historyContent > p
+	width: 70%
+
+.historyContent > img
+	border-radius: 15px
+	margin: 20px
+
+.box__content
+	display: flex
+	justify-content: center
+
+.content2
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	width: 200px
+	height: auto
+	margin: 10px
+
+.content2 > p
+	font-size: 20px
+
+.logo1
+	display: flex
+	justify-content: center
+	width: 100px
+	height: 100px
+	background-color: rgba(0, 0, 0, 0.19)
+	border-radius: 100%
+
+.box__content2
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 25px
+
+.box__content2 > h1
+	width: 300px
+
+.content1__2
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	width: 125px
+	height: auto
+	margin: 25px
+	font-size: 20px
+
+.logo1__2
+	display: flex
+	justify-content: center
+	width: 100px
+	height: 100px
+	background-color: rgba(0, 0, 0, 0.19)
+	border-radius: 100%
+
+.box__content3
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	padding: 0px 20% 0px 20%
+
+.content1__3
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	width: 200px
+	height: auto
+	margin: 10px
+	font-size: 20px
+
+.logo1__3
+	display: flex
+	justify-content: center
+	width: 100px
+	height: 100px
+	background-color: rgba(0, 0, 0, 0.19)
+	border-radius: 100%
+	border-radius: 100%
+
+.box__content4
+	width: 100%
+	height: auto
+	padding: 60px 5vw 60px 5vw
+	background-image: url("blob-scene-haikei (3).svg")
+	background-repeat: no-repeat
+	background-size: cover
+
+.slider1
+	display: grid
+	grid-template-columns: 0fr 1fr 0fr
+	justify-content: center
+	width: 100%
+	height: auto
+	border-radius: 10px
+	font-size: 25px
+	overflow: hidden
+	background-color: $colorOfCoffee
+
+.slider__list
+	display: flex
+	align-items: center
+	width: 100%
+	height: 600px
+	position: relative
+
+.button1
+	width: 50px
+	height: 100%
+	margin: 0
+	border: none
+	border-radius: 10px 0px 0px 10px
+	z-index: 2
+	background-color: rgba(0, 0, 0, 0.19)
+	cursor: pointer
+
+.button2
+	width: 50px
+	height: 100%
+	margin: 0
+	border: none
+	border-radius: 0px 10px 10px 0px
+	z-index: 2
+	background-color: rgba(0, 0, 0, 0.19)
+	cursor: pointer
+
+.list__slider1
+	width: 100%
+	height: 100%
+	display: grid
+	overflow: hidden
+	grid-template-columns: 0fr 0fr 0fr
+	align-items: center
+	justify-content: center
+	height: auto
+	border-radius: 10px
+	font-size: 25px
+	z-index: 1
+	list-style: none
+	margin: 0
+	padding: 0
+	background-color: $colorOfCoffee
+	position: absolute
+	right: 100%
+
+.list__slider1 > li
+	display: grid
+	justify-items: center
+	grid-template-columns: 0fr 0fr
+	margin: 2.5px
+	padding: 10px
+	border-radius: 10px
+	list-style: none
+	color: $color
+	background-color: rgba(0, 0, 0, 0.19)
+	position: relative
+
+.list__slider1> li > button
+	border: none
+	background-color: $colorOfCoffee
+	color: $color
+	cursor: pointer
+	width: 150px
+	height: 50px
+	margin: 5px
+	font-size: 20px
+	border-radius: 5px
+	padding: 0px
+	transition: .2s
+
+.list__slider1 > li > button:hover
+	background-color: $color
+	color: $colorOfCoffee
+
+.list__slider2
+	width: 100%
+	height: 100%
+	display: grid
+	overflow: hidden
+	grid-template-columns: 0fr 0fr 0fr
+	align-items: center
+	justify-content: center
+	height: auto
+	border-radius: 10px
+	font-size: 25px
+	z-index: 1
+	list-style: none
+	margin: 0
+	padding: 0
+	background-color: $colorOfCoffee
+	position: absolute
+	left: 0%
+
+.list__slider2 > li
+	display: grid
+	justify-items: center
+	grid-template-columns: 0fr 0fr
+	margin: 2.5px
+	padding: 10px
+	border-radius: 10px
+	list-style: none
+	color: $color
+	background-color: rgba(0, 0, 0, 0.19)
+	position: relative
+
+.list__slider2 > li > button
+	border: none
+	background-color: $colorOfCoffee
+	color: $color
+	cursor: pointer
+	width: 150px
+	height: 50px
+	margin: 5px
+	font-size: 20px
+	border-radius: 5px
+	padding: 0px
+	transition: .2s
+
+.list__slider2 > li > button:hover
+	background-color: $color
+	color: $colorOfCoffee
+
+.list__slider2 > li > p
+	width: 100px
+	height: 100px
+	font-size: 15px
+
+.list__slider3
+	width: 100%
+	height: 100%
+	display: grid
+	overflow: hidden
+	grid-template-columns: 0fr 0fr 0fr
+	align-items: center
+	justify-content: center
+	height: auto
+	border-radius: 10px
+	font-size: 25px
+	z-index: 1
+	list-style: none
+	margin: 0
+	padding: 0
+	background-color: $colorOfCoffee
+	position: absolute
+	left: 100%
+
+.list__slider3 > li
+	display: grid
+	justify-items: center
+	grid-template-columns: 0fr 0fr
+	margin: 2.5px
+	padding: 10px
+	border-radius: 10px
+	list-style: none
+	color: $color
+	background-color: rgba(0, 0, 0, 0.19)
+	position: relative
+
+.list__slider3 > li > button
+	border: none
+	background-color: $colorOfCoffee
+	color: $color
+	cursor: pointer
+	width: 150px
+	height: 50px
+	margin: 5px
+	font-size: 20px
+	border-radius: 5px
+	padding: 0px
+	transition: .2s
+
+.list__slider3 > li > button:hover
+	background-color: $color
+	color: $colorOfCoffee
+
+.slider2
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr
+	justify-content: center
+	width: 100%
+	height: auto
+	padding: 10px
+	border-radius: 10px
+	font-size: 25px
+	background-color: $colorOfCoffee
+
+.slider2 > li
+	display: grid
+	justify-items: center
+	width: 95%
+	margin: 5px
+	padding: 10px
+	border-radius: 10px
+	list-style: none
+	color: $color
+	background-color: rgba(0, 0, 0, 0.19)
+
+.slider2 > li > button
+	border: none
+	background-color: $colorOfCoffee
+	color: $color
+	cursor: pointer
+	width: 180px
+	height: 70px
+	margin: 5px
+	font-size: 20px
+	border-radius: 5px
+	padding: 0px
+	transition: .2s
+
+.slider2 > li > button:hover
+	background-color: $color
+	color: $colorOfCoffee
+
+.box__content5
+	width: 100%
+	height: auto
+	padding: 10px 50px 10px 50px
+
+.content3
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+
+.img__content5
+	margin: 5px
+
+footer
+	display: flex
+	justify-content: space-between
+	width: 100%
+	height: 300px
+	padding: 10px
+	background-color: #a38a6c
+	font-size: 25px
+	color: $color
+
+.map
+	width: 70%
+	margin-right: 20px
+	display: flex
+	align-items: flex-start
+	flex-direction: column
+
+.contacts
+	display: flex
+	align-items: flex-end
+	flex-direction: column
+
+.buttons__contacts
+	display: flex
+
+.buttons__contacts > button
+	width: 50px
+	height: 50px
+	border-radius: 100px
+	border: none
+	margin: 5px
+	cursor: pointer
+	transition: .2s
+	background-color: rgba(0, 0, 0, 0.19)
+
+.buttons__contacts > button:hover
+	transform: rotate(360deg)
+
+.contacts > ul > li
+	list-style: none
+
+.contacts > ul
+	margin: 0
+	padding: 0
+
+.contacts > button
+	width: 200px
+	height: 50px
+	border-radius: 10px
+	border: none
+	cursor: pointer
+	margin: 5px
+	color: $color
+	font-size: 20px
+	transition: .2s
+	background-color: rgba(0, 0, 0, 0.19)
+
+.contacts > button:hover
+	background-color: $color
+	color: $colorOfCoffee
+
+.scroll__bottom
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 80px
+	height: 80px
+	position: fixed
+	right: 15px
+	bottom: 10px
+	cursor: pointer
+	background: linear-gradient(to left, #c2ae4a, #ca8743)
+	border-radius: 100px
+	z-index: -1
+	opacity: 0
+
+.active__scroll
+	opacity: 1
+	transition: 0.5s
+	z-index: 10
+
+.active__scroll:hover
+	opacity: 0.5
+
+@media ( max-width: 1100px )
+	.ul__menu
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-flow: wrap
+
+	.ul__menu > li
+		margin: 2px
+
+@media ( max-width: 770px )
+
+	.box__content2
+	 display: flex
+	 flex-direction: column
+
+	.content1__2
+		display: flex
+		align-items: center
+		flex-direction: column
+
+@media ( max-width: 500px )
+
+	.menu__burger
+		display: block
+		position: fixed
+		right: 20px
+		top: 100px
+		z-index: 10
+
+	.ul__menu
+		display: none
+
+	.drop__menu > li
+		display: block
+
+	.box__content
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	.content2
+		display: flex
+		align-items: center
+		flex-direction: column
+		width: 200px
+
+@media ( max-width: 1000px )
+	.history__site
+		display: grid
+		width: 100%
+		height: auto
+		border-radius: 5px
+		background-color: $colorOfCoffee
+
+	.content
+		display: flex
+		flex-direction: column
+
+	.img
+		display: grid
+		width: 100%
+		height: 200px
+		border-radius: 5px 5px 5px 5px
+		background-image: url("1.jpg")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+
+	.history__text
+		display: grid
+		width: 100%
+		height: auto
+		padding: 10px
+		font-size: 18px
+
+	.advertising
+		width: 60%
+		height: 300px
+
+@media ( max-width: 560px )
+	.FSJ
+		display: flex
+		justify-content: center
+
+	input[type="search"]
+		display: none
+
+	.header__FSJ > li
+		text-align: center
+		width: 80px
+		margin: 0px 2.5px 0px 2.5px
+		padding: 5px
+		border-radius: 10px
+		font-size: 15px
+		cursor: pointer
+		background-color: rgba(0, 0, 0, 0.19)
+		color: $color
+
+	.FSJ__none
+		display: none
+
+	.input__search
+		display: block
+		display: flex
+		align-items: center
+		background-color: rgba(0, 0, 0, 0.19)
+		border-radius: 30px
+		width: 35px
+		height: 35px
+		cursor: pointer
+
+	.Search__width
+		width: 285px
+
+	.logo__search
+		display: flex
+		align-items: center
+
+	.logo__search > .search
+		position: relative
+		left: 6px
+
+	.close__Button
+		display: none
+		position: relative
+		left: 240px
+
+	.Button__add
+		display: block
+
+@media (max-width: 1265px)
+	.list__slider1, .list__slider2, .list__slider3
+		display: grid
+		grid-template-columns: 1fr 1fr
+
+@media ( max-width: 1100px )
+	.list__slider1, .list__slider2, .list__slider3
+		display: grid
+		grid-template-columns: 1fr
+
+	.slider1
+		display: grid
+		height: 1500px
+		justify-items: center
+		align-items: center
+
+@media ( max-width: 1300px )
+
+	.slider2
+		display: grid
+		grid-template-columns: 1fr
+		justify-items: center
