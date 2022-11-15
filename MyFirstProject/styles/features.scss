@@ -1,0 +1,156 @@
+﻿.features {
+	display: flex;
+	align-items: center;
+	width: 1400px;
+	padding-bottom: 100px;
+	padding-top: 1px;
+	background-color: white;
+}
+
+.features__column {
+	width: 459px;
+	margin-left: 40px;
+	margin-right: 125px;
+}
+
+.features__column:nth-child(2),
+.features__column:nth-child(3),
+.features__column:nth-child(4) {
+	display: none;
+}
+
+.features__subtitle {
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 34px;
+	color: #089B4D;
+	margin: 0;
+}
+
+.features__title {
+	font-weight: bold;
+	font-size: 56px;
+	line-height: 56px;
+	letter-spacing: -0.5px;
+	margin-top: 24px;
+	margin-bottom: 0;
+}
+
+.features__description {
+	font-size: 24px;
+	margin-top: 30px;
+	line-height: 34px;
+	margin-bottom: 0;
+}
+
+.features__advantage-header {
+	line-height: 42px;
+	margin-top: 42px;
+}
+
+.features__customers {
+	display: flex;
+}
+
+.features__advantage-title {
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 26px;
+	color: #3143C6;
+	margin: 0;
+	margin-left: 15px;
+}
+
+.features__advantage-description {
+	font-size: 18px;
+	line-height: 26px;
+	margin-top: 8px;
+	margin-bottom: 0;
+}
+
+.features__advantage-item {
+	display: flex;
+	border-bottom: 1px solid #e0e0e0;
+	padding-bottom: 22px;
+	margin-bottom: 22px;
+}
+
+.features__advantage-item-text {
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 26px;
+	margin-left: 15px;
+}
+
+img[alt="asquireCustomer"] {
+	display: none;
+}
+
+@media screen and (max-width:400px) {
+	.features {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 320px;
+		padding-bottom: 50px;
+	}
+
+	img[alt="Hidden ouch"] {
+		display: none;
+	}
+
+	img[alt="InSpace"] {
+		display: none;
+	}
+
+	img[alt="asquireCustomer"] {
+		display: block;
+		margin-top: 30px;
+	}
+
+	.features__column {
+		width: 290px;
+		margin: 0;
+		border-bottom: 1px solid #e0e0e0;
+		margin-top: 40px;
+	}
+
+	.features__column:nth-child(2),
+	.features__column:nth-child(3),
+	.features__column:nth-child(4) {
+		display: block;
+
+		&.features__column:nth-child(4) {
+			border: none;
+		}
+	}
+
+	.features__column:nth-child(5) {
+		display: none;
+	}
+
+	.features__description {
+		width: 290px;
+		margin-top: 15px;
+	}
+
+	.features__title {
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 40px;
+		margin-top: 15px;
+	}
+
+	.features__advantage-header {
+		display: none;
+	}
+
+	.features__photo {
+		text-align: center;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 22px;
+		margin-bottom: 40px;
+		color: rgba(43, 41, 45, 0.6);
+	}
+}

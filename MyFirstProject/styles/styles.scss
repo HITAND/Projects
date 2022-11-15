@@ -1,0 +1,29 @@
+﻿* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+	font-family: 'Work Sans', sans-serif;
+	color: #2B292D;
+}
+
+body {
+	margin: 0;
+}
+
+.page {
+	width: 1400px;
+	margin: auto;
+	padding-top: 39px;
+	min-height: 100vh;
+	background-color: #F3C6BD;
+}
+
+@media screen and (max-width:400px) {
+	.page {
+		width: 320px;
+		background-color: white;
+		padding-top: 0px;
+	}
+}
